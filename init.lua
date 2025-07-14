@@ -1,4 +1,5 @@
--- Suggested options
+vim.g.mapleader = " "
+vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
 vim.opt.scrolloff = 8
 vim.opt.incsearch = true
 vim.opt.tabstop = 4
@@ -9,9 +10,20 @@ vim.opt.smartindent = true
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- Leader key
-vim.g.mapleader = " "
+require("lazy").setup({
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup({})
+    end,
+  },
+  "easymotion/vim-easymotion",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+})
 
 -- Replace current line
 vim.keymap.set("n", "<leader>r", ":s///g<Left><Left><Left>", { desc = "Replace in line" })
