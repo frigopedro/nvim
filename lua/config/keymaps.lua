@@ -13,7 +13,7 @@ vim.opt.smartindent = true
 vim.opt.relativenumber = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
+vim.opt.clipboard = "unnamedplus"
 -- Replace current line
 vim.keymap.set("n", "<leader>r", ":s///g<Left><Left><Left>", { desc = "Replace in line" })
 
