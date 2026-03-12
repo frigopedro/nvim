@@ -13,7 +13,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
   spec = {
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -25,7 +24,7 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "rose-pine", "habamax" } },
+  install = { colorscheme = { "github_dark_high_contrast" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
