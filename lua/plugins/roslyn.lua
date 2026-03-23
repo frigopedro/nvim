@@ -1,10 +1,6 @@
 return {
   "seblyng/roslyn.nvim",
-  dependencies = {
-    "mason-org/mason.nvim",
-  },
+  ---@module 'roslyn.config'
+  ---@type RoslynNvimConfig
   opts = {},
-  config = function(_, opts)
-    require("roslyn").setup(opts)
-  end,
 }
