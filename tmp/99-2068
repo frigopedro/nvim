@@ -1,0 +1,6 @@
+    _99.setup({
+      provider = _99.Providers.ClaudeCodeProvider, -- default: OpenCodeProvider
+      logger = {
+        level = _99.INFO,
+        print_on_error = true,
+      },
